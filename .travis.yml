@@ -3,4 +3,5 @@ jdk:
   - oraclejdk8
 env:
   global:
-    - JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    - PATH=/usr/lib/jvm/java-8-openjdk-amd64/bin:$PATH
