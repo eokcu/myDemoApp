@@ -68,8 +68,8 @@ public class App
             System.out.println(inputList2);
 
 
-          String input3 = req.queryParams("input2").replaceAll("\\s","");
-          String input4 = req.queryParams("input2").replaceAll("\\s","");
+          String input3 = req.queryParams("input3").replaceAll("\\s","");
+          String input4 = req.queryParams("input4").replaceAll("\\s","");
 
           String result = App.myMethod(inputList1, inputList2, input3, input4);
 
