@@ -37,23 +37,36 @@ public class AppTest
     {
         assertTrue( true );
     }
-    public void testFound() {
-        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-        assertTrue(new App().search(array, 4));
-    }
 
-    public void testNotFound() {
-        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-        assertFalse(new App().search(array, 5));
+    public void testResult(){
+        ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+        ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(4, 3, 2, 1));
+        String str1 = "ThisIsMy";
+        String str2 = "Result";
+        assertEquals("hisIluse", new App().myMethod(arr1, arr2, str1, str2));
     }
-
-    public void testEmptyArray() {
-        ArrayList<Integer> array = new ArrayList<>();
-        assertFalse(new App().search(array, 1));
+    public void testNullArrays() {
+        String str1 = "String1";
+        String str2 = "String2";
+        assertEquals(null, new App().myMethod(null, null, str1, str2));
     }
-
-    public void testNull() {
-        assertFalse(new App().search(null, 1));
+    public void testNullStrings() {
+        ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+        ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(4, 3, 2, 1));
+        assertEquals(null, new App().myMethod(arr1, arr2, null, null));
     }
-
+    public void testNegativeValues(){
+        ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(-1, 2, -3, 4));
+        ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(4, -3, 2, -1));
+        String str1 = "ThisIsMy";
+        String str2 = "Result";
+        assertEquals(null, new App().myMethod(arr1, arr2, str1, str2));
+    }
+    public void testIndexOutOfBounds(){
+        ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(1, 2, 3, 7));
+        ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(10, 3, 2, 1));
+        String str1 = "ThisIsMy";
+        String str2 = "Result";
+        assertEquals(null, new App().myMethod(arr1, arr2, str1, str2));
+    }
 }
