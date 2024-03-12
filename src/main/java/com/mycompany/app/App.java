@@ -62,7 +62,7 @@ public class App
             java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
             while (sc2.hasNext())
             {
-                int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+                int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
                 inputList2.add(value);
             }
             System.out.println(inputList2);
